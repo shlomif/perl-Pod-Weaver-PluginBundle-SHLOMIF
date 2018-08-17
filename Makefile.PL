@@ -11,10 +11,10 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.17"
   },
-  "DISTNAME" => "perl-Pod-Weaver-PluginBundle-SHLOMIF",
+  "DISTNAME" => "Pod-Weaver-PluginBundle-SHLOMIF",
   "LICENSE" => "apache",
   "MIN_PERL_VERSION" => "5.008001",
-  "NAME" => "perl::Pod::Weaver::PluginBundle::SHLOMIF",
+  "NAME" => "Pod::Weaver::PluginBundle::SHLOMIF",
   "PREREQ_PM" => {
     "Pod::Elemental::PerlMunger" => "0.200001",
     "Pod::Elemental::Transformer::List" => "0.102000",
