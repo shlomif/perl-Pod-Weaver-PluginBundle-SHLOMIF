@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-package Pod::Weaver::PluginBundle::DAGOLDEN;
+package Pod::Weaver::PluginBundle::SHLOMIF;
 
-our $VERSION = '0.080';
+our $VERSION = '0.0010000';
 
 use Pod::Weaver 4; # he played knick-knack on my door
 use Pod::Weaver::Config::Assembler;
@@ -31,18 +31,18 @@ END
 sub mvp_bundle_config {
     my @plugins;
     push @plugins, (
-        [ '@DAGOLDEN/SingleEncoding', _exp('-SingleEncoding'), {} ],
-        [ '@DAGOLDEN/WikiDoc',        _exp('-WikiDoc'),        {} ],
-        [ '@DAGOLDEN/CorePrep',       _exp('@CorePrep'),       {} ],
-        [ '@DAGOLDEN/Name',           _exp('Name'),            {} ],
-        [ '@DAGOLDEN/Version',        _exp('Version'),         {} ],
+        [ '@SHLOMIF/SingleEncoding', _exp('-SingleEncoding'), {} ],
+        [ '@SHLOMIF/WikiDoc',        _exp('-WikiDoc'),        {} ],
+        [ '@SHLOMIF/CorePrep',       _exp('@CorePrep'),       {} ],
+        [ '@SHLOMIF/Name',           _exp('Name'),            {} ],
+        [ '@SHLOMIF/Version',        _exp('Version'),         {} ],
 
-        [ '@DAGOLDEN/Prelude',     _exp('Region'),  { region_name => 'prelude' } ],
-        [ '@DAGOLDEN/Synopsis',    _exp('Generic'), { header      => 'SYNOPSIS' } ],
-        [ '@DAGOLDEN/Description', _exp('Generic'), { header      => 'DESCRIPTION' } ],
-        [ '@DAGOLDEN/Usage',       _exp('Generic'), { header      => 'USAGE' } ],
-        [ '@DAGOLDEN/Overview',    _exp('Generic'), { header      => 'OVERVIEW' } ],
-        [ '@DAGOLDEN/Stability',   _exp('Generic'), { header      => 'STABILITY' } ],
+        [ '@SHLOMIF/Prelude',     _exp('Region'),  { region_name => 'prelude' } ],
+        [ '@SHLOMIF/Synopsis',    _exp('Generic'), { header      => 'SYNOPSIS' } ],
+        [ '@SHLOMIF/Description', _exp('Generic'), { header      => 'DESCRIPTION' } ],
+        [ '@SHLOMIF/Usage',       _exp('Generic'), { header      => 'USAGE' } ],
+        [ '@SHLOMIF/Overview',    _exp('Generic'), { header      => 'OVERVIEW' } ],
+        [ '@SHLOMIF/Stability',   _exp('Generic'), { header      => 'STABILITY' } ],
     );
 
     for my $plugin (
@@ -59,30 +59,27 @@ sub mvp_bundle_config {
 
     push @plugins,
       (
-        [ '@DAGOLDEN/Leftovers', _exp('Leftovers'), {} ],
-        [ '@DAGOLDEN/postlude', _exp('Region'), { region_name => 'postlude' } ],
+        [ '@SHLOMIF/Leftovers', _exp('Leftovers'), {} ],
+        [ '@SHLOMIF/postlude', _exp('Region'), { region_name => 'postlude' } ],
         [
-            '@DAGOLDEN/Support',
+            '@SHLOMIF/Support',
             _exp('Support'),
             {
-                perldoc            => 0,
-                websites           => 'none',
-                bugs               => 'metadata',
-                bugs_content       => $bugtracker_content,
-                repository_link    => 'both',
-                repository_content => $repo_intro
+                all_modules => 1,
+                perldoc     => 0,
             }
         ],
-        [ '@DAGOLDEN/Authors',      _exp('Authors'),      {} ],
-        [ '@DAGOLDEN/Contributors', _exp('Contributors'), {} ],
-        [ '@DAGOLDEN/Legal',        _exp('Legal'),        {} ],
-        [ '@DAGOLDEN/List', _exp('-Transformer'), { 'transformer' => 'List' } ],
+        [ '@SHLOMIF/Authors',      _exp('Authors'),      {} ],
+        [ '@SHLOMIF/Bugs',         _exp('Bugs'),         {} ],
+        [ '@SHLOMIF/Contributors', _exp('Contributors'), {} ],
+        [ '@SHLOMIF/Legal',        _exp('Legal'),        {} ],
+        [ '@SHLOMIF/List', _exp('-Transformer'), { 'transformer' => 'List' } ],
       );
 
     return @plugins;
 }
 
-# ABSTRACT: DAGOLDEN's default Pod::Weaver config
+# ABSTRACT: SHLOMIF's default Pod::Weaver config
 # COPYRIGHT
 
 1;
