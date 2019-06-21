@@ -34,7 +34,6 @@ sub mvp_bundle_config {
         [ '@SHLOMIF/SingleEncoding', _exp('-SingleEncoding'), {} ],
         [ '@SHLOMIF/WikiDoc',        _exp('-WikiDoc'),        {} ],
         [ '@SHLOMIF/CorePrep',       _exp('@CorePrep'),       {} ],
-        [ '@SHLOMIF/Name',           _exp('Name'),            {} ],
         [ '@SHLOMIF/Version',        _exp('Version'),         {} ],
 
         [ '@SHLOMIF/Prelude',     _exp('Region'),  { region_name => 'prelude' } ],
