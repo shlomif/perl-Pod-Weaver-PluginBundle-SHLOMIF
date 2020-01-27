@@ -1,5 +1,10 @@
 Revision history for Pod-Weaver-PluginBundle-SHLOMIF
 
+0.001003        2020-01-27
+
+    - Fix unassigned $VERSION var in lib/**/*.pm .
+        - There was a lower version there instead.
+
 0.001002        2019-06-21
 
     - Try to fix empty NAME section.

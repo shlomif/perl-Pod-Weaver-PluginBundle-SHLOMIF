@@ -3,8 +3,6 @@ use warnings;
 
 package Pod::Weaver::PluginBundle::SHLOMIF;
 
-our $VERSION = '0.0010000';
-
 use Pod::Weaver 4; # he played knick-knack on my door
 use Pod::Weaver::Config::Assembler;
 
