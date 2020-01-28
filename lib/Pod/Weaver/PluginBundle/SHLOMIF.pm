@@ -32,6 +32,7 @@ sub mvp_bundle_config {
         [ '@SHLOMIF/SingleEncoding', _exp('-SingleEncoding'), {} ],
         [ '@SHLOMIF/WikiDoc',        _exp('-WikiDoc'),        {} ],
         [ '@SHLOMIF/CorePrep',       _exp('@CorePrep'),       {} ],
+        [ '@SHLOMIF/Name',           _exp('Generic'),         { header => 'NAME', }, ],
         [ '@SHLOMIF/Version',        _exp('Version'),         {} ],
 
         [ '@SHLOMIF/Prelude',     _exp('Region'),  { region_name => 'prelude' } ],
@@ -57,7 +58,7 @@ sub mvp_bundle_config {
     push @plugins,
       (
         [ '@SHLOMIF/Leftovers', _exp('Leftovers'), {} ],
-        [ '@SHLOMIF/postlude', _exp('Region'), { region_name => 'postlude' } ],
+        [ '@SHLOMIF/postlude',  _exp('Region'),    { region_name => 'postlude' } ],
         [
             '@SHLOMIF/Support',
             _exp('Support'),
@@ -70,7 +71,7 @@ sub mvp_bundle_config {
         [ '@SHLOMIF/Bugs',         _exp('Bugs'),         {} ],
         [ '@SHLOMIF/Contributors', _exp('Contributors'), {} ],
         [ '@SHLOMIF/Legal',        _exp('Legal'),        {} ],
-        [ '@SHLOMIF/List', _exp('-Transformer'), { 'transformer' => 'List' } ],
+        [ '@SHLOMIF/List',         _exp('-Transformer'), { 'transformer' => 'List' } ],
       );
 
     return @plugins;

@@ -1,5 +1,11 @@
 Revision history for Pod-Weaver-PluginBundle-SHLOMIF
 
+0.001004        2020-01-28
+
+    - Try to get the 'NAME' section precede '=head1 VERSION' in the
+    generated Pod.
+        - Thanks to #dzil on irc.perl.org
+
 0.001003        2020-01-27
 
     - Fix unassigned $VERSION var in lib/**/*.pm .
