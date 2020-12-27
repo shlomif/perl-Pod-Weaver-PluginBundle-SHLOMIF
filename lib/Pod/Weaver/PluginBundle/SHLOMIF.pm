@@ -63,8 +63,12 @@ sub mvp_bundle_config {
             '@SHLOMIF/Support',
             _exp('Support'),
             {
-                all_modules => 1,
-                perldoc     => 0,
+                all_modules  => 1,
+                bugs         => 'metadata',
+                bugs_content => $bugtracker_content,
+                perldoc      => 0,
+                websites     => ["deps", "kwalitee", "metacpan",
+                                         "testers" , "testmatrix"],
             }
         ],
         [ '@SHLOMIF/Authors',      _exp('Authors'),      {} ],
